@@ -37,15 +37,15 @@ public interface ApplicationComponent {
 
     void inject (ArchitectureApplication application);
 
-//    final class Initializer {
-//        public static ApplicationComponent init(ArchitectureApplication application) {
-//            return DaggerApplicationComponent.builder()
-//                    .androidModule(new AndroidModule())
-//                    .applicationModule(new ApplicationModule(application))
-//                    .gsonModule(new GsonModule())
-//                    .networkModule(new NetworkModule(application))
-//                    .okHttpInterceptorsModule(new OkHttpInterceptorsModule())
-//                    .build();
-//        }
-//    }
+    final class Initializer {
+        public static ApplicationComponent init(ArchitectureApplication application) {
+            return DaggerApplicationComponent.builder()
+                    .androidModule(new AndroidModule())
+                    .applicationModule(new ApplicationModule(application))
+                    .gsonModule(new GsonModule())
+                    .networkModule(new NetworkModule(application))
+                    .okHttpInterceptorsModule(new OkHttpInterceptorsModule())
+                    .build();
+        }
+    }
 }
