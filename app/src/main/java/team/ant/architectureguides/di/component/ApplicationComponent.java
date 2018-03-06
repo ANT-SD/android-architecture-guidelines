@@ -4,6 +4,7 @@ import dagger.Component;
 import team.ant.architectureguides.di.ApplicationScope;
 import team.ant.architectureguides.di.module.AndroidModule;
 import team.ant.architectureguides.di.module.ApplicationModule;
+import team.ant.architectureguides.di.module.GsonModule;
 import team.ant.architectureguides.di.module.NetworkModule;
 import team.ant.architectureguides.di.module.OkHttpInterceptorsModule;
 
@@ -15,6 +16,7 @@ import team.ant.architectureguides.di.module.OkHttpInterceptorsModule;
         AndroidModule.class,
         ApplicationModule.class,
         NetworkModule.class,
-        OkHttpInterceptorsModule.class})
+        OkHttpInterceptorsModule.class,
+        GsonModule.class})
 public interface ApplicationComponent {
 }
