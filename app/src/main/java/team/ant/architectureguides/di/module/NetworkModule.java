@@ -40,7 +40,7 @@ public class NetworkModule {
     }
 
     @Provides
-    @Singleton
+    @ApplicationScope
     public OkHttpClient provideOkHttpClient(@ForApplication Context app,
                                             @ForOkHttpInterceptors @NonNull List<Interceptor> interceptors,
                                             @ForOkHttpNetworkInterceptors @NonNull List<Interceptor> networkInterceptors) {

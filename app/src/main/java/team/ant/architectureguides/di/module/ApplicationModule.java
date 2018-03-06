@@ -7,6 +7,7 @@ import dagger.Module;
 import dagger.Provides;
 import team.ant.architectureguides.ArchitectureApplication;
 import team.ant.architectureguides.di.ActivityScope;
+import team.ant.architectureguides.di.ApplicationScope;
 import team.ant.architectureguides.di.ForApplication;
 
 /**
@@ -20,14 +21,14 @@ public class ApplicationModule {
         this.application = application;
     }
 
-    @ActivityScope
+    @ApplicationScope
     @ForApplication
     @Provides
     public Application provideApplication(){
         return this.application;
     }
 
-    @ActivityScope
+    @ApplicationScope
     @ForApplication
     @Provides
     public ArchitectureApplication provideArchitectureApplication(){
@@ -35,7 +36,7 @@ public class ApplicationModule {
     }
 
     @ForApplication
-    @ActivityScope
+    @ApplicationScope
     @Provides
     public Context provideContext() {
         return this.application.getApplicationContext();
