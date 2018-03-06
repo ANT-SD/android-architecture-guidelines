@@ -14,6 +14,9 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        all {
+            buildConfigField 'String', 'API_ENDPOINT_LOCAL', "\"https://empty.for.now/\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
