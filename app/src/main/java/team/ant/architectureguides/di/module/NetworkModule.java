@@ -9,8 +9,6 @@ import java.io.File;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import okhttp3.Cache;
@@ -18,12 +16,11 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import team.ant.architectureguides.ArchitectureApplication;
 import team.ant.architectureguides.BuildConfig;
-import team.ant.architectureguides.di.ApplicationScope;
-import team.ant.architectureguides.di.ForApplication;
-import team.ant.architectureguides.di.ForOkHttpInterceptors;
-import team.ant.architectureguides.di.ForOkHttpNetworkInterceptors;
+import team.ant.architectureguides.di.qualifier.ForApplication;
+import team.ant.architectureguides.di.qualifier.ForOkHttpInterceptors;
+import team.ant.architectureguides.di.qualifier.ForOkHttpNetworkInterceptors;
+import team.ant.architectureguides.di.scope.ApplicationScope;
 import team.ant.architectureguides.utils.LiveDataCallAdapterFactory;
 
 /**
@@ -33,11 +30,6 @@ import team.ant.architectureguides.utils.LiveDataCallAdapterFactory;
 public class NetworkModule {
     static final int DISK_CACHE_SIZE = (int) 1_000_000L;
 
-    private final ArchitectureApplication application;
-
-    public NetworkModule(ArchitectureApplication application) {
-        this.application = application;
-    }
 
     @Provides
     @ApplicationScope
