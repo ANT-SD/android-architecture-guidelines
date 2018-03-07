@@ -1,7 +1,11 @@
 package team.ant.architectureguides.di.component;
 
+import android.app.Application;
+
+import dagger.BindsInstance;
 import dagger.Component;
-import team.ant.architectureguides.di.ActivityScope;
+import dagger.android.ContributesAndroidInjector;
+import team.ant.architectureguides.di.scope.ActivityScope;
 import team.ant.architectureguides.di.module.MainModule;
 import team.ant.architectureguides.ui.MainActivity;
 
@@ -10,10 +14,9 @@ import team.ant.architectureguides.ui.MainActivity;
  */
 
 @ActivityScope
-@Component(dependencies = ApplicationComponent.class, modules = MainModule.class)
+@Component(modules = MainModule.class)
 public interface MainComponent {
 
-    void inject(MainActivity activity);
-//    void inject(GithubFragment fragment);
-//    void inject(RepositoryDetailFragment fragment);
+
+
 }
