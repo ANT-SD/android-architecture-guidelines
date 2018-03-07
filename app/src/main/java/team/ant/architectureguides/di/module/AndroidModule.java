@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 
 import dagger.Module;
 import dagger.Provides;
-import team.ant.architectureguides.di.ForApplication;
+import team.ant.architectureguides.di.qualifier.ForApplication;
 
 /**
  * Created by Nacho Vazquez on 3/5/2018.

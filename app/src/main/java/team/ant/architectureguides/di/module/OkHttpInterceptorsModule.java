@@ -10,9 +10,9 @@ import dagger.Module;
 import dagger.Provides;
 import okhttp3.Interceptor;
 import okhttp3.logging.HttpLoggingInterceptor;
-import team.ant.architectureguides.di.ApplicationScope;
-import team.ant.architectureguides.di.ForOkHttpInterceptors;
-import team.ant.architectureguides.di.ForOkHttpNetworkInterceptors;
+import team.ant.architectureguides.di.scope.ApplicationScope;
+import team.ant.architectureguides.di.qualifier.ForOkHttpInterceptors;
+import team.ant.architectureguides.di.qualifier.ForOkHttpNetworkInterceptors;
 import timber.log.Timber;
 
 import static java.util.Collections.singletonList;

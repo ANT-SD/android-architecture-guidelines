@@ -6,7 +6,7 @@ import dagger.Module;
  * Created by Nacho Vazquez on 3/7/2018.
  */
 @Module
-public abstract class DatabaseModule {
+public class DatabaseModule {
 
 
 //    @ApplicationScope
