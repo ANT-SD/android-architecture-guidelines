@@ -1,4 +1,4 @@
-package team.ant.architectureguides.di;
+package team.ant.architectureguides.di.scope;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -1,4 +1,4 @@
-package team.ant.architectureguides.di;
+package team.ant.architectureguides.di.qualifier;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -10,8 +10,9 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 /**
  * Created by Nacho Vazquez on 3/6/2018.
  */
+
 @Documented
 @Qualifier
 @Retention(RUNTIME)
-public @interface ForOkHttpNetworkInterceptors {
+public @interface ForOkHttpInterceptors {
 }
