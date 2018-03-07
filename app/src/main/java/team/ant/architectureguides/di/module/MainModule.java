@@ -1,12 +1,11 @@
 package team.ant.architectureguides.di.module;
 
-import android.content.Context;
 import android.support.v4.app.FragmentManager;
 
 import dagger.Module;
 import dagger.Provides;
-import team.ant.architectureguides.di.ActivityScope;
-import team.ant.architectureguides.di.ForActivity;
+import dagger.android.ContributesAndroidInjector;
+import team.ant.architectureguides.di.scope.ActivityScope;
 import team.ant.architectureguides.ui.MainActivity;
 
 /**
@@ -15,28 +14,13 @@ import team.ant.architectureguides.ui.MainActivity;
 
 @Module
 @ActivityScope
-public class MainModule {
-    private MainActivity activity;
-
-    public MainModule(MainActivity activity) {
-        this.activity = activity;
-    }
-
-    @Provides
-    protected MainActivity activity() {
-        return activity;
-    }
-
-    @ActivityScope
-    @ForActivity
-    @Provides
-    Context provideContext() {
-        return activity;
-    }
+public abstract class MainModule {
+    @ContributesAndroidInjector()
+    abstract MainActivity contributeMainActivity();
 
     @ActivityScope
     @Provides
-    FragmentManager provideFragmentManager(MainActivity activity) {
+    static FragmentManager provideFragmentManager(MainActivity activity) {
         return activity.getSupportFragmentManager();
     }
 }
