@@ -15,7 +15,7 @@
  */
 
 
-package team.ant.architectureguides.utils;
+package team.ant.architectureguides.utils.network;
 
 
 import android.arch.lifecycle.LiveData;

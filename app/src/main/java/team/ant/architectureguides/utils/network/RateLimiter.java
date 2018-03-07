@@ -1,4 +1,4 @@
-package team.ant.architectureguides.utils;
+package team.ant.architectureguides.utils.network;
 
 /**
  * Created by Nacho Vazquez on 3/6/2018.

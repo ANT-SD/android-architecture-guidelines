@@ -21,7 +21,7 @@ import team.ant.architectureguides.di.qualifier.ForApplication;
 import team.ant.architectureguides.di.qualifier.ForOkHttpInterceptors;
 import team.ant.architectureguides.di.qualifier.ForOkHttpNetworkInterceptors;
 import team.ant.architectureguides.di.scope.ApplicationScope;
-import team.ant.architectureguides.utils.LiveDataCallAdapterFactory;
+import team.ant.architectureguides.utils.network.LiveDataCallAdapterFactory;
 
 /**
  * Created by Nacho Vazquez on 3/5/2018.
